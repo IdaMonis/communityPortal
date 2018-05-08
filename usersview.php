@@ -43,7 +43,7 @@ $UM=new UserManager();
 ?>
 
 <body>
-
+<p>TROLLLLLL</p>
 <div style="margin-right: 50px; margin-left: 50px; border: solid 5px; background: grey;">
 <?php
 $servername = "localhost";
@@ -106,6 +106,12 @@ $result = mysqli_query($con,"SELECT * FROM CP_TB_USER");
 <?php
 //To receive data from userList
 if(isset($_POST['userList'])){
+    if (isset($_POST['email'])){
+        echo "OK";
+    } else {
+        echo "EMPTY";
+    }
+    
     $selectAllArray = $_POST['email'];
     //Assigning $recipient to the checked checkbox
     $recipient = (implode(", ", $selectAllArray));

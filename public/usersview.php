@@ -108,9 +108,16 @@ $result = mysqli_query($con,"SELECT * FROM CP_TB_USER");
 <?php
 //To receive data from userList
 if(isset($_POST['userList1'])){
-    $selectAllArray = $_POST['email'];
-    //Assigning $recipient to the checked checkbox
-    $recipient = (implode(", ", $selectAllArray));
+    if(isset($_POST['email'])){
+        $selectAllArray = $_POST['email'];
+        //Assigning $recipient to the checked checkbox
+        $recipient = (implode(", ", $selectAllArray));
+    } else {
+        echo "<p style='color:red'>Please select some checkbox</p>";
+    }
+    
+    
+    
 } else if (isset($_POST['selectAll'])){
     $recipient = (implode(", ", $selectAllArray));
 }
