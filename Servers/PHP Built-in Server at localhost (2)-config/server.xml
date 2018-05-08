@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Server>
+	<Port name="HTTP/1.1" protocol="HTTP">80</Port>
+<PathMapping local="/CommunityPortal" module="CommunityPortal" remote="C:\Users\Sami\htdocs\CommunityPortal\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\htdocs\CommunityPortal"/></Server>
